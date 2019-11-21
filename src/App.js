@@ -1,25 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Formulario from './components/Formulario'
+import CategoriasComponent from './components/context/CategoriasComponent'
+
+// import { UserProvider } from './components/context/ContextApp'
+
 
 function App() {
+  // const user = { name: 'Tania', loggedIn: true }
+
+
   return (
+     
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <CategoriasComponent>
+
+        <Header titulo="Proyecto React" />
+        <div className="container">
+          <div className="row">
+
+            <div className="col-md-6">
+              <Formulario />
+            </div>
+
+
+            <div className="col-md-6">
+              <h1>RESULTADO</h1>
+
+
+            </div>
+
+
+          </div>
+        </div>
+
+
+      </CategoriasComponent>
     </div>
+  
   );
 }
 
